@@ -1,15 +1,15 @@
 This Lambda function serves as a backend to manage and query inventory information.
 
-Available Function is getInventory
-- Without product_name: Returns list of all products with their inventory levels
-- With product_name: Returns inventory details for specific product
+Available Function is getInventoryByProductCode
+- Without product_code: Returns list of all products with their inventory levels and the prices
+- With product_code: Returns inventory details for specific product and the prices
 
 Input Format:
 {
     "function": "string",
     "parameters": [
         {
-            "name": "product_name",
+            "name": "product_code",
             "value": "string"
         }
     ]
@@ -17,11 +17,11 @@ Input Format:
 
 Sample Request:
 {
-    "function": "getInventory",
+    "function": "getInventoryByProductCode",
     "parameters": [
         {
-            "name": "product_name",
-            "value": "Meow Munchies"
+            "name": "product_code",
+            "value": "CM001"
         }
     ]
 }
@@ -32,5 +32,6 @@ Sample Response:
     "quantity": 150,
     "last_updated": "ISO-8601 date",
     "status": "in_stock|low_stock|out_of_stock",
-    "reorder_level": 50
+    "reorder_level": 50,
+    "price": 24.99
 }
