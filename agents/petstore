@@ -33,7 +33,6 @@ A new user is asking about the price of Doggy Delights?
     "customerType": "Guest",
     "items": [
         {
-        "productId": "DD006",
         "price": 54.99,
         "quantity": 1,
         "bundleDiscount": 0,
@@ -59,7 +58,6 @@ CustomerRequest: I'm interested in purchasing two water bottles under your bundl
     "customerType": "Subscribed",
     "items": [
         {
-        "productId": "BP010",
         "price": 16.99,
         "quantity": 2,
         "bundleDiscount": 0.10,
@@ -108,9 +106,6 @@ CustomerRequest: I'm interested in purchasing two water bottles under your bundl
       "items": {
         "type": "object",
         "properties": {
-          "productId": {
-            "type": "string"
-          },
           "price": {
             "type": "number",
             "minimum": 0
