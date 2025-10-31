@@ -1,0 +1,28 @@
+getUserByEmail function returns specific user information by Email.
+
+Input Format:
+{
+    "function": "getUserByEmail",
+    "parameters": [
+        {
+            "name": "user_email",
+            "value": "john.doe@virtualpetstore.com"
+        }
+    ]
+}
+Sample Response:
+{
+    "id": "usr_001",
+    "name": "John Doe", 
+    "email": "john.doe@virtualpetstore.com",
+    "subscription_status": "active|expired",
+    "subscription_end_date": "ISO-8601 date",
+    "transactions": [
+        {
+        "id": "txn_001",
+        "amount": 29.99,
+        "date": "ISO-8601 date",
+        "description": "Monthly subscription"
+        }
+    ]
+}
